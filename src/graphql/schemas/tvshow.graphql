@@ -1,0 +1,19 @@
+type TvShow implements Timestamps {
+  id: ID!
+  title: String
+  poster_path: String
+  vote_average: String
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input TvShowCreateInput {
+  name: String!
+}
+
+input TvShowUpdateInput {
+  name: String
+}

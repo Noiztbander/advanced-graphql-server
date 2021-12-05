@@ -1,0 +1,19 @@
+type Movie implements Timestamps {
+  id: ID!
+  title: String
+  poster_path: String
+  vote_average: String
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input MovieCreateInput {
+  name: String!
+}
+
+input MovieUpdateInput {
+  name: String
+}

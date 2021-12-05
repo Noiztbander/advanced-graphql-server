@@ -1,0 +1,25 @@
+enum IsHumanRace {
+  YES
+  NO
+}
+
+type Character implements Timestamps {
+  id: ID!
+  name: String!
+  race: String
+  isHuman: IsHumanRace
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input CharacterCreateInput {
+  name: String!
+}
+
+input CharacterUpdateInput {
+  name: String
+}
+
